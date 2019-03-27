@@ -4,14 +4,20 @@
 
 $(function() {
   $("#formOne").submit(function(event) {
-    event.preventDefault();
-    var name = $("#name").val();
+
+    var nameInput = $("input#name").val();
     var email = $("#email").val();
     var reason = $("#reason").val();
-    var date = $("#date").val();
-    var time = $("#time").val();
+    var dateInput = $("input#date").val();
+    var timeInput = $("input#time").val();
+
+    $(".name").text(nameInput);
+    $(".date").text(dateInput);
+    $(".time").text(timeInput);
+
 
     $("#confirm").show();
 
+    event.preventDefault();
   });
 });
